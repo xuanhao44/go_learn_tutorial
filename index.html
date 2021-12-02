@@ -24,6 +24,8 @@
       window.$docsify = {
         <!-- 文档标题，会显示在侧边栏顶部 -->
         name: "Go 学习笔记",
+        <!-- 点击文档标题后跳转的链接地址 -->
+        nameLink: "#/README",
         <!-- 在页面右上角渲染一个 GitHub Corner 挂件 -->
         repo: "xuanhao44/go_learn_tutorial",
         <!-- 启用封面页 -->
@@ -47,6 +49,20 @@
           placeholder: "输入关键词搜索",
           noData: "找不到结果",
         },
+        plugins: [
+          <!-- powered by -->
+          function (hook) {
+            var footer = [
+              "<footer>",
+              '<span>Powered by <a href="https://github.com/docsifyjs/docsify" target="_blank">docsify</a>.</span>',
+              "</footer>",
+            ].join("");
+
+            hook.afterEach(function (html) {
+              return html + footer;
+            });
+          },
+        ],
       };
     </script>
     <!-- Docsify -->
