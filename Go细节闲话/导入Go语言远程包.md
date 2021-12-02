@@ -80,12 +80,12 @@ go get golang.org/x/tour/pic
 
 <!-- 图片 -->
 
-[手动设置路径]:.assets/手动设置路径.png
+[手动设置路径]:../.assets/手动设置路径.png
 [手动设置路径]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/%E6%89%8B%E5%8A%A8%E8%AE%BE%E7%BD%AE%E8%B7%AF%E5%BE%84.png
 
-[go_get_超时]:.assets/go_get_超时.png
+[go_get_超时]:../.assets/go_get_超时.png
 
 [go_get_超时]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/go_get_%E8%B6%85%E6%97%B6.png
 
-[pic包网址]:.assets/pic包网址.png
+[pic包网址]:../.assets/pic包网址.png
 [pic包网址]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/pic%E5%8C%85%E7%BD%91%E5%9D%80.png

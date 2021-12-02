@@ -1,4 +1,5 @@
-# GOPATH
+# `GOPATH`
+
 ## 0 教程与简介
 
 ### 0.1 简介
@@ -34,7 +35,7 @@
 
 如果需要将整个源码添加到版本管理工具（*VersionControlSystem*，*VCS*）中时，只需要添加 `GOPATH/src` 目录的源码即可。`bin` 和 `pkg` 目录的内容都可以由 `src` 目录生成。
 
-## 3 命令行设置 GOPATH
+## 3 命令行设置 `GOPATH`
 
 选择一个目录，在目录中的命令行中执行下面的指令：
 
@@ -48,7 +49,7 @@ export GOPATH=`pwd`
 
 *一个项目在开始之前，首先就要指定 `GOPATH`。*
 
-## 4 在多项目工程中使用GOPATH
+## 4 在多项目工程中使用 `GOPATH`
 
 上面描述的 `GOPATH` 其实是通过修改系统全局的环境变量来实现的。然而，这种设置全局 `GOPATH` 的方法可能会导致当前项目错误引用了其他目录的 Go 源码文件从而造成编译输出错误的版本或编译报出一些无法理解的错误提示。
 
@@ -88,7 +89,8 @@ go env -w GO111MODULE=off
 
 <!-- 图片 -->
 
-[Goland]:.assets/Goland.png
+[Goland]:../.assets/Goland.png
 [Goland]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/Goland.png
-[Goland_gomod]:.assets/Goland_gomod.png
+
+[Goland_gomod]:../.assets/Goland_gomod.png
 [Goland_gomod]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/Goland_gomod.png

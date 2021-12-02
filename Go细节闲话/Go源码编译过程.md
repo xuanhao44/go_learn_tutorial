@@ -13,6 +13,9 @@
 ### 0.2 参考
 
 - [初探 Go 的编译命令执行过程 - 简书 (jianshu.com)](https://www.jianshu.com/p/35a4ec1b3067)
-- [Go 命令教程 (hyper0x.github.io)](https://hyper0x.github.io/go_command_tutorial/#/) **写的太好了 我没什么好说的了**
+
+- [Go 命令教程 (hyper0x.github.io)](https://hyper0x.github.io/go_command_tutorial/#/)
+
+  **写的太好了 我没什么好说的了**
 
 <!-- 图片 -->

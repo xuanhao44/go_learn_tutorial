@@ -353,8 +353,9 @@ JSON 是目前广泛用做网络程序中的通信格式。`encoding/json` 包�
 
 <!-- 图片 -->
 
-[Go_包的初始化]:.assets/Go_包的初始化.gif
+[Go_包的初始化]:../.assets/Go_包的初始化.gif
+
 [Go_包的初始化]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/Go_%E5%8C%85%E7%9A%84%E5%88%9D%E5%A7%8B%E5%8C%96.gif
-[Go标准库]:.assets/Go标准库.png
+[Go标准库]:../.assets/Go标准库.png
 
 [Go标准库]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/Go%E6%A0%87%E5%87%86%E5%BA%93.png
