@@ -1,7 +1,4 @@
 # GOPATH
-
-**本文地址**：[xuanhao44/Go_Learn](https://github.com/xuanhao44/Go_Learn)
-
 ## 0 教程与简介
 
 ### 0.1 简介

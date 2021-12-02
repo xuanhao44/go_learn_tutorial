@@ -1,7 +1,5 @@
 # 练习：Go语言自定义包_GOPATH
 
-**本文地址**：[xuanhao44/Go_Learn](https://github.com/xuanhao44/Go_Learn)
-
 ## 0 教程与简介
 
 ### 0.1 简介
@@ -19,8 +17,8 @@
 
 ### 0.3 前提
 
-- [Go语言包的基本概念](../Go语言包的基本概念/Go语言包的基本概念.md)
-- [GOPATH](../GOPATH/GOPATH.md)
+- [Go语言包的基本概念](Go语言包的基本概念.md)
+- [GOPATH](GOPATH.md)
 
 实际运用这两篇中的知识，当然要先看。
 
@@ -28,7 +26,7 @@
 
 本文使用的是 `GOPATH`。
 
-请按照 [GOPATH](../GOPATH/GOPATH.md) 一文中的说明修改模式。
+请按照 [GOPATH](GOPATH.md) 一文中的说明修改模式。
 
 ```shell
 go env -w GO111MODULE=off

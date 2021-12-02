@@ -1,7 +1,5 @@
 # 练习：导入Go语言远程包
 
-**本文地址**：[xuanhao44/Go_Learn](https://github.com/xuanhao44/Go_Learn)
-
 ## 0 教程与简介
 
 ### 0.1 简介
@@ -16,8 +14,8 @@
 
 ### 0.3 前提
 
-- [Go语言包的基本概念](../Go语言包的基本概念/Go语言包的基本概念.md)
-- [GOPATH](../GOPATH/GOPATH.md)
+- [Go语言包的基本概念](Go语言包的基本概念.md)
+- [GOPATH](GOPATH.md)
 
 ## 1 任务
 
