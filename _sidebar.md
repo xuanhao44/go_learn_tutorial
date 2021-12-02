@@ -7,8 +7,8 @@
 - Go 学习之旅
   - 正文
     - [包、变量和函数](Go学习之旅/包、变量和函数.md)
-    - [流程控制语句：for、if、else、switch 和 defer](Go学习之旅/流程控制语句：for、if、else、switch 和 defer.md)
-    - [更多类型：struct、slice 和映射](Go学习之旅/更多类型：struct、slice 和映射.md)
+    - [流程控制语句：for、if、else、switch 和 defer](Go学习之旅/流程控制语句.md)
+    - [更多类型：struct、slice 和映射](Go学习之旅/更多类型.md)
     - [方法和接口](Go学习之旅/方法和接口.md)
     - [并发](Go学习之旅/并发.md)
   - 练习
