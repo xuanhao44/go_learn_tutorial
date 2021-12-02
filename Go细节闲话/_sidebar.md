@@ -1,0 +1,6 @@
+- Go 细节闲话
+  - [Go语言包的基本概念](Go语言包的基本概念.md)
+  - [GOPATH](GOPATH.md)
+  - [练习：Go语言自定义包_GOPATH](Go语言自定义包_GOPATH.md)
+  - [Go源码编译过程](Go源码编译过程.md)
+  - [练习：导入Go语言远程包](导入Go语言远程包.md)
