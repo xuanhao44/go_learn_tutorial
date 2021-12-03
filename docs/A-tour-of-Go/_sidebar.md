@@ -1,7 +1,5 @@
-<!-- _sidebar.md -->
 
-- Go 本地安装和环境配置
-  - [Go本地安装和环境配置](Go-local-environment-setting/Go-local-environment-setting.md)
+
 - Go 学习之旅
   - [教程和简介](A-tour-of-Go/Welcome.md)
   - 正文
@@ -13,9 +11,3 @@
   - 练习
     - [循环与函数](A-tour-of-Go/Loops-and-Functions.md)
     - [切片](A-tour-of-Go/Slices.md)
-- Go 细节闲话
-  - [Go语言包的基本概念](Go-details/Packages.md)
-  - [GOPATH](Go-details/GOPATH.md)
-  - [练习：Go语言自定义包_GOPATH](Go-details/Define-import-packages-byGOPATH.md)
-  - [Go源码编译过程](Go-details/Go-compile.md)
-  - [练习：导入Go语言远程包](Go-details/Import-remote-pakcages.md)

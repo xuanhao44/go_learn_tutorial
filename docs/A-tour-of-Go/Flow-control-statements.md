@@ -1,4 +1,4 @@
-# Go学习之旅-流程控制语句：for、if、else、switch 和 defer
+# 流程控制语句：for、if、else、switch 和 defer
 
 ## 1 for
 
@@ -201,7 +201,7 @@ z := float64(1)
 
 *注：* 如果你对该算法的细节感兴趣，上面的 z² − x 是 z² 到它所要到达的值（即 x）的距离， 除以的 2z 为 z² 的导数，我们通过 z² 的变化速度来改变 z 的调整量。 这种通用方法叫做[牛顿法](https://zh.wikipedia.org/wiki/牛顿法)。 它对很多函数，特别是平方根而言非常有效。
 
-详细解答：[循环与函数](Go学习之旅/循环与函数.md)
+详细解答：[循环与函数](A-tour-of-Go/Loops-and-Functions.md)
 
 ## 3 switch
 

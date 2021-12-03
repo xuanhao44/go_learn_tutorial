@@ -12,11 +12,6 @@
 - [go get安装第三方包的前提条件和步骤 - Go语言中文网 - Golang中文社区 (studygolang.com)](https://studygolang.com/articles/5840)
 - ...
 
-### 0.3 前提
-
-- [Go语言包的基本概念](Go细节闲话/Go语言包的基本概念.md)
-- [GOPATH](Go细节闲话/GOPATH.md)
-
 ## 1 任务
 
 在某份 Go 源代码中导入一个包：
