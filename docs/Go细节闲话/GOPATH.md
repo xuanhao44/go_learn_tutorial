@@ -89,8 +89,8 @@ go env -w GO111MODULE=off
 
 <!-- 图片 -->
 
-[Goland]:../.assets/Goland.png
+[Goland]:../_images/Goland.png
 [Goland]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/Goland.png
 
-[Goland_gomod]:../.assets/Goland_gomod.png
+[Goland_gomod]:../_images/Goland_gomod.png
 [Goland_gomod]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/Goland_gomod.png

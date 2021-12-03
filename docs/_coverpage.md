@@ -1,6 +1,6 @@
 <!-- _coverpage.md -->
 
-![logo](.assets/icon.svg)
+![logo](_media/icon.svg)
 
 # Go 学习笔记
 

@@ -108,11 +108,11 @@ xuanhao44
 
 <!-- 图片 -->
 
-[not_main]:../.assets/not_main.png
+[not_main]:../_images/not_main.png
 [not_main]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/not_main.png
 
-[src_demo_demo.go]:../.assets/src_demo_demo.go.png
+[src_demo_demo.go]:../_images/src_demo_demo.go.png
 [src_demo_demo.go]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/src_demo_demo.go.png
 
-[not_in_GOROOT]:../.assets/not_in_GOROOT.png
+[not_in_GOROOT]:../_images/not_in_GOROOT.png
 [not_in_GOROOT]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/not_in_GOROOT.png

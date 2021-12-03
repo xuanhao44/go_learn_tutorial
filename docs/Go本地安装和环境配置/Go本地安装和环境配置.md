@@ -305,55 +305,58 @@ func main() {
 
 <!-- 图片 -->
 
-[windows安装包]:.assets/windows安装包.png
-
+[windows安装包]:../_images/windows安装包.png
 [windows安装包]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/windows%E5%AE%89%E8%A3%85%E5%8C%85.png
 
-[go_version]:.assets/go_version.png
+[go_version]:../_images/go_version.png
+
 [go_version]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/go_version.png
-[go_run]:.assets/go_run.png
+[go_run]:../_images/go_run.png
+
 [go_run]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/go_run.png
 
-[Path]:.assets/Path.png
+[Path]:../_images/Path.png
 [Path]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/Path.png
 
-[go_env]:.assets/go_env.png
+[go_env]:../_images/go_env.png
 [go_env]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/go_env.png
-[账户还是帐户]:.assets/账户还是帐户.png
+
+[账户还是帐户]:../_images/账户还是帐户.png
 [账户还是帐户]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/%E8%B4%A6%E6%88%B7%E8%BF%98%E6%98%AF%E5%B8%90%E6%88%B7.png
-[搜索环境变量]:.assets/搜索环境变量.png
+
+[搜索环境变量]:../_images/搜索环境变量.png
 [搜索环境变量]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/%E6%90%9C%E7%B4%A2%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.png
 
-[GOPATH]:.assets/GOPATH.png
+[GOPATH]:../_images/GOPATH.png
 [GOPATH]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/GOPATH.png
 
-[Go拓展]:.assets/Go拓展.png
+[Go拓展]:../_images/Go拓展.png
 [Go拓展]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/Go%E6%8B%93%E5%B1%95.png
 
-[通过_Code_打开]:.assets/通过_Code_打开.png
+[通过_Code_打开]:../_images/通过_Code_打开.png
 [通过_Code_打开]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/%E9%80%9A%E8%BF%87_Code_%E6%89%93%E5%BC%80.png
 
-[问题百出]:.assets/问题百出.png
+[问题百出]:../_images/问题百出.png
 [问题百出]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/%E9%97%AE%E9%A2%98%E7%99%BE%E5%87%BA.png
 
-[pkg]:.assets/pkg.png
+[pkg]:../_images/pkg.png
 [pkg]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/pkg.png
 
-[安装依赖完毕]:.assets/安装依赖完毕.png
+[安装依赖完毕]:../_images/安装依赖完毕.png
 [安装依赖完毕]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/%E5%AE%89%E8%A3%85%E4%BE%9D%E8%B5%96%E5%AE%8C%E6%AF%95.png
 
-[go_mod_init]:.assets/go_mod_init.png
+[go_mod_init]:../_images/go_mod_init.png
 [go_mod_init]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/go_mod_init.png
 
-[go.mod1]:.assets/go.mod1.png
+[go.mod1]:../_images/go.mod1.png
 [go.mod1]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/go.mod1.png
 
-[go_mod2]:.assets/go_mod2.png
+[go_mod2]:../_images/go_mod2.png
 [go_mod2]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/go_mod2.png
 
-[go_help_mod]:.assets/go_help_mod.png
+[go_help_mod]:../_images/go_help_mod.png
 [go_help_mod]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/go_help_mod.png
 
-[控制台输出]:.assets/控制台输出.png
+[控制台输出]:../_images/控制台输出.png
 
 [控制台输出]:https://typora-1304621073.cos.ap-guangzhou.myqcloud.com/typora/%E6%8E%A7%E5%88%B6%E5%8F%B0%E8%BE%93%E5%87%BA.png
