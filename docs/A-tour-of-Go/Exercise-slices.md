@@ -122,6 +122,22 @@ func main() {
 
 注：log 需要导入 math 包，赋值语句应为：`uint8(float64(i) * math.Log(float64(j)))`
 
+<!-- tabs:start --> 
+
+#### **English**
+
+Hello!
+
+#### **French**
+
+Bonjour!
+
+#### **Italian**
+
+Ciao! 
+
+<!-- tabs:end -->
+
 |   赋值   |                     图像                      |
 | :------: | :-------------------------------------------: |
 |   随机   | ![Exercise-slices-pic1][Exercise-slices-pic1] |
