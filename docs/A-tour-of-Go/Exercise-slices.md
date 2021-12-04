@@ -12,6 +12,8 @@
 
 ## 解答
 
+前提：[练习：导入Go语言远程包](Go-details/Import-remote-pakcages.md)
+
 将任务分解为几个步骤：
 
 1. 用 `make` 创建二维切片 `[][]uint8`
@@ -82,6 +84,62 @@ func main() {
 }
 ```
 
-输出结果：很长很长的 base64 码
+输出结果：
 
-<!-- 网址或引用 -->
+![Exercise-slices-pic1][Exercise-slices-pic1]
+
+代码 2：
+
+```go
+package main
+
+import "golang.org/x/tour/pic"
+
+func Pic(dx, dy int) [][]uint8 {
+	// 创建二维切片
+	xy := make([][]uint8, dy)
+	for i := range xy {
+		xy[i] = make([]uint8, dx)
+	}
+	for i := range xy {
+		for j := range xy[i] {
+			xy[i][j] = uint8((i+j)/2) // 可修改
+		}
+	}
+	return xy
+}
+
+func main() {
+	pic.Show(Pic)
+}
+```
+
+输出结果：
+
+![Exercise-slices-pic2][Exercise-slices-pic2]
+
+按照切片元素的赋值给出图像：
+
+注：log 需要导入 math 包，赋值语句应为：`uint8(float64(i) * math.Log(float64(j)))`
+
+|   赋值   |                     图像                      |
+| :------: | :-------------------------------------------: |
+|   随机   | ![Exercise-slices-pic1][Exercise-slices-pic1] |
+| (x+y)/2  | ![Exercise-slices-pic2][Exercise-slices-pic2] |
+|   x*y    | ![Exercise-slices-pic3][Exercise-slices-pic3] |
+|   x^y    | ![Exercise-slices-pic4][Exercise-slices-pic4] |
+| x*log(y) | ![Exercise-slices-pic5][Exercise-slices-pic5] |
+| x%(y+1)  | ![Exercise-slices-pic6][Exercise-slices-pic6] |
+
+还有很多花样可以玩。
+
+<!-- 图片 -->
+
+[Exercise-slices-pic1]:../_images/Exercise-slices-pic1.png
+[Exercise-slices-pic2]:../_images/Exercise-slices-pic2.png
+[Exercise-slices-pic3]:../_images/Exercise-slices-pic3.png
+
+[Exercise-slices-pic4]:../_images/Exercise-slices-pic4.png
+
+[Exercise-slices-pic5]:../_images/Exercise-slices-pic5.png
+[Exercise-slices-pic6]:../_images/Exercise-slices-pic6.png

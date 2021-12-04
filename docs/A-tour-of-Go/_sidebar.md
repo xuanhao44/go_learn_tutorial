@@ -8,6 +8,7 @@
     - [方法和接口](A-tour-of-Go/Methods-and-interfaces.md)
     - [并发](A-tour-of-Go/Concurrency.md)
   - 练习
-    - [循环与函数](A-tour-of-Go/Loops-and-Functions.md)
-    - [切片](A-tour-of-Go/Slices.md)
+    - [循环与函数](A-tour-of-Go/Exercise-loops-and-Functions.md)
+    - [切片](A-tour-of-Go/Exercise-slices.md)
+    - [映射](A-tour-of-Go/Exercise-maps.md)
     - [练习参考答案](A-tour-of-Go/Exercise-answer.md)

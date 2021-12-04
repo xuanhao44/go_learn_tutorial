@@ -10,6 +10,8 @@ Go 拥有指针。指针保存了值的内存地址。
 var p *int
 ```
 
+此时仅声明了一个指针，执行 `fmt.Println(p)` 输出为 `<nil>`。
+
 `&` 操作符会生成一个指向其操作数的指针。
 
 ```go
@@ -381,6 +383,8 @@ func main() {
 }
 ```
 
+可以看到 nil 切片的打印结果为：`[]`。
+
 ### 4.6 用 make 创建切片
 
 切片可以用内建函数 `make` 来创建，这也是你创建动态数组的方式。
@@ -556,11 +560,153 @@ func main() {
 
 ## 5 映射
 
+映射**将键映射到值**。
+
+映射的零值为 `nil` 。`nil` 映射既没有键，也不能添加键。
+
+`make` 函数会返回给定类型的映射，并将其初始化备用。
+
+```go
+package main
+
+import "fmt"
+
+type Vertex struct {
+	Lat, Long float64
+}
+
+var m map[string]Vertex
+
+func main() {
+	m = make(map[string]Vertex)
+	m["Bell Labs"] = Vertex{
+		40.68433, -74.39967,
+	}
+	fmt.Println(m["Bell Labs"])
+}
+```
+
+*声明由字符串 string 到向量 Vertex 的映射。*
+
+*make 了一个映射实例。*
+
+*开始赋值。*
+
 ### 5.1 映射的文法
+
+映射的文法与结构体相似，不过必须有键名。
+
+```go
+package main
+
+import "fmt"
+
+type Vertex struct {
+	Lat, Long float64
+}
+
+var m = map[string]Vertex{
+	"Bell Labs": Vertex{
+		40.68433, -74.39967,
+	},
+	"Google": Vertex{
+		37.42202, -122.08408,
+	},
+}
+
+func main() {
+	fmt.Println(m)
+}
+```
+
+若顶级类型只是一个类型名，你可以在文法的元素中省略它。
+
+```go
+package main
+
+import "fmt"
+
+type Vertex struct {
+	Lat, Long float64
+}
+
+var m = map[string]Vertex{
+	"Bell Labs": {40.68433, -74.39967},
+	"Google":    {37.42202, -122.08408},
+}
+
+func main() {
+	fmt.Println(m)
+}
+```
 
 ### 5.2 修改映射
 
-### 5.3 练习：映射
+在映射 `m` 中插入或修改元素：
+
+```go
+m[key] = elem
+```
+
+获取元素：
+
+```go
+elem = m[key]
+```
+
+删除元素：
+
+```go
+delete(m, key)
+```
+
+通过双赋值检测某个键是否存在：
+
+```go
+elem, ok = m[key]
+```
+
+若 `key` 在 `m` 中，`ok` 为 `true` ；否则，`ok` 为 `false`。
+
+若 `key` 不在映射中，那么 `elem` 是该映射元素类型的零值。
+
+同样的，当从映射中读取某个不存在的键时，结果是映射的元素类型的零值。
+
+**注** ：若 `elem` 或 `ok` 还未声明，你可以使用短变量声明：
+
+```go
+elem, ok := m[key]
+```
+
+```go
+package main
+
+import "fmt"
+
+func main() {
+	m := make(map[string]int)
+
+	m["Answer"] = 42
+	fmt.Println("The value:", m["Answer"])
+
+	m["Answer"] = 48
+	fmt.Println("The value:", m["Answer"])
+
+	delete(m, "Answer")
+	fmt.Println("The value:", m["Answer"])
+
+	v, ok := m["Answer"]
+	fmt.Println("The value:", v, "Present?", ok)
+}
+```
+
+## 练习：映射
+
+实现 `WordCount`。它应当返回一个映射，其中包含字符串 `s` 中每个“单词”的个数。函数 `wc.Test` 会对此函数执行一系列测试用例，并输出成功还是失败。
+
+你会发现 [strings.Fields](https://go-zh.org/pkg/strings/#Fields) 很有帮助。
+
+详细解答：[映射](A-tour-of-Go/Maps.md)
 
 ## 6 函数值
 

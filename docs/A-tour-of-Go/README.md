@@ -16,6 +16,7 @@ Go 语言中文教程：[Go 语言之旅 (go-zh.org)](https://tour.go-zh.org/lis
 
 Go 学习之旅中穿插着练习，将其抽出单独处理。
 
-- [循环与函数](A-tour-of-Go/Loops-and-Functions.md)
-- [切片](A-tour-of-Go/Slices.md)
+- [循环与函数](A-tour-of-Go/Exercise-loops-and-Functions.md)
+- [切片](A-tour-of-Go/Exercise-slices.md)
+- [映射](A-tour-of-Go/Exercise-maps.md)
 - [练习参考答案](A-tour-of-Go/Exercise-answer.md)
