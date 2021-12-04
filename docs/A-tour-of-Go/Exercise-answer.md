@@ -1,5 +1,9 @@
 # 练习参考答案
 
+<!-- tabs:start -->
+
+#### **Exercise: Loops and Functions #43**
+
 ```go
 /* Exercise: Loops and Functions #43 */
 package main
@@ -26,9 +30,11 @@ func main() {
     fmt.Println(Sqrt(2))
     fmt.Println(math.Sqrt(2))
 }
- 
-/******************************************************************************************************/
- 
+```
+
+#### **Exercise: Maps #44**
+
+```go
 /* Exercise: Maps #44 */
 package main
  
@@ -50,9 +56,11 @@ func WordCount(s string) map[string]int {
 func main() {
     wc.Test(WordCount)
 }
- 
-/******************************************************************************************************/
- 
+```
+
+#### **Exercise: Slices #45**
+
+```go
 /* Exercise: Slices #45 */
 package main
  
@@ -72,9 +80,11 @@ func Pic(dx, dy int) [][]uint8 {
 func main() {
     pic.Show(Pic)
 }
- 
-/******************************************************************************************************/
- 
+```
+
+#### **Exercise: Fibonacci closure #46**
+
+```go
 /* Exercise: Fibonacci closure #46 */
 package main
  
@@ -97,9 +107,11 @@ func main() {
         fmt.Println(f())
     }
 }
- 
-/******************************************************************************************************/
- 
+```
+
+#### **Advanced Exercise: Complex cube roots #47**
+
+```go
 /* Advanced Exercise: Complex cube roots #47 */
 package main
  
@@ -124,9 +136,11 @@ func Cbrt(x complex128) complex128 {
 func main() {
     fmt.Println(Cbrt(2))
 }
- 
-/******************************************************************************************************/
- 
+```
+
+#### **Exercise: Errors #57**
+
+```go
 /* Exercise: Errors #57 */
 package main
  
@@ -151,9 +165,11 @@ func main() {
     fmt.Println(Sqrt(2))
     fmt.Println(Sqrt(-2))
 }
- 
-/******************************************************************************************************/
- 
+```
+
+#### **Exercise: Images #58**
+
+```go
 /* Exercise: Images #58 */
 package main
  
@@ -184,8 +200,11 @@ func main() {
     m := Image{100, 100, 128}
     pic.ShowImage(&m)
 }
- 
-/******************************************************************************************************/
+```
+
+#### **Exercise: Rot13 Reader #59: 'You cracked the code!'**
+
+```go
 /* Exercise: Rot13 Reader #59: 'You cracked the code!' */
 package main
  
@@ -217,9 +236,11 @@ func main() {
     r := rot13Reader{s}
     io.Copy(os.Stdout, &r)
 }
- 
-/******************************************************************************************************/
- 
+```
+
+#### **Exercise: Equivalent Binary Trees #67**
+
+```go
 /* Exercise: Equivalent Binary Trees #67 */
 package main
  
@@ -269,9 +290,11 @@ func main() {
     fmt.Println(Same(tree.New(1), tree.New(1)))
     fmt.Println(Same(tree.New(1), tree.New(2)))
 }
- 
-/******************************************************************************************************/
- 
+```
+
+#### **Exercise: Web Crawler #69**
+
+```go
 /* Exercise: Web Crawler #69 */
 package main
  
@@ -374,3 +397,4 @@ var fetcher = &fakeFetcher{
 }
 ```
 
+<!-- tabs:end -->

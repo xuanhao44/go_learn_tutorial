@@ -120,32 +120,37 @@ func main() {
 
 按照切片元素的赋值给出图像：
 
-注：log 需要导入 math 包，赋值语句应为：`uint8(float64(i) * math.Log(float64(j)))`
+<!-- tabs:start -->
 
-<!-- tabs:start --> 
+#### **随机**
 
-#### **English**
+![Exercise-slices-pic1][Exercise-slices-pic1]
 
-Hello!
+#### **(x+y)/2**
 
-#### **French**
+![Exercise-slices-pic2][Exercise-slices-pic2]
 
-Bonjour!
+#### **x*y**
 
-#### **Italian**
+![Exercise-slices-pic3][Exercise-slices-pic3]
 
-Ciao! 
+#### **x^y**
+
+![Exercise-slices-pic4][Exercise-slices-pic4]
+
+#### **x*log(y)**
+
+![Exercise-slices-pic4][Exercise-slices-pic5]
+
+log 需要导入 math 包
+
+赋值语句：`uint8(float64(i) * math.Log(float64(j)))`
+
+#### **x%(y+1)**
+
+![Exercise-slices-pic6][Exercise-slices-pic6]
 
 <!-- tabs:end -->
-
-|   赋值   |                     图像                      |
-| :------: | :-------------------------------------------: |
-|   随机   | ![Exercise-slices-pic1][Exercise-slices-pic1] |
-| (x+y)/2  | ![Exercise-slices-pic2][Exercise-slices-pic2] |
-|   x*y    | ![Exercise-slices-pic3][Exercise-slices-pic3] |
-|   x^y    | ![Exercise-slices-pic4][Exercise-slices-pic4] |
-| x*log(y) | ![Exercise-slices-pic5][Exercise-slices-pic5] |
-| x%(y+1)  | ![Exercise-slices-pic6][Exercise-slices-pic6] |
 
 还有很多花样可以玩。
 
