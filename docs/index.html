@@ -53,14 +53,13 @@
     <div id="app">文档加载中</div>
     <script>
       window.$docsify = {
+        repo: "https://github.com/xuanhao44/go_learn_tutorial",
         <!-- 文档标题，会显示在侧边栏顶部 -->
         name: "Go 学习笔记",
         <!-- 在侧边栏中出现的网站图标 -->
         logo: "/_media/sidebar.svg",
         <!-- 点击文档标题后跳转的链接地址 -->
         nameLink: "#/README",
-        <!-- 启用封面页 -->
-        coverpage: true,
         <!-- 侧边栏 -->
         loadSidebar: true,
         <!-- 显示目录 -->
@@ -73,14 +72,14 @@
         notFoundPage: true,
         <!-- 锚点对齐标题栏 -->
         topMargin: 90,
-        <!-- 把封面作为首页 -->
-        onlyCover: true,
         <!-- 切换页面后是否自动跳转到页面顶部 -->
         auto2top: true,
         <!-- 禁用 emoji 解析 -->
         noEmoji: true,
         <!-- 小屏设备下合并导航栏到侧边栏 -->
         mergeNavbar: true,
+        <!-- 外部链接的打开方式 -->
+        externalLinkTarget: "_self",
         search: {
           paths: "auto", // or 'auto'
           placeholder: "输入关键词搜索",
@@ -113,6 +112,20 @@
           crossChapter: true,
           crossChapterText: true,
         },
+        count: {
+          countable: true,
+          position: "top",
+          margin: "10px",
+          float: "right",
+          fontsize: "0.9em",
+          color: "rgb(90,90,90)",
+          language: "chinese",
+          localization: {
+            words: "",
+            minute: "",
+          },
+          isExpected: true,
+        },
       };
     </script>
     <!-- docsify (latest v4.x.x)-->
@@ -128,6 +141,8 @@
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-shell-session.js"></script>
     <!--分页导航 -->
     <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+    <!-- 字数统计-->
+    <script src="//unpkg.com/docsify-count/dist/countable.js"></script>
     <!-- 注册 serviceWorker sw.js-->
     <script>
       if (typeof navigator.serviceWorker !== "undefined") {
