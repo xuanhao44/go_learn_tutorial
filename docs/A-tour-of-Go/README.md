@@ -19,4 +19,5 @@ Go 学习之旅中穿插着练习，将其抽出单独处理。
 - [循环与函数](A-tour-of-Go/Exercise-loops-and-Functions.md)
 - [切片](A-tour-of-Go/Exercise-slices.md)
 - [映射](A-tour-of-Go/Exercise-maps.md)
+- [斐波纳契闭包](A-tour-of-Go/Exercise-fibonaci-closure.md)
 - [练习参考答案](A-tour-of-Go/Exercise-answer.md)

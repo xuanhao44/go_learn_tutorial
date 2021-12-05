@@ -13,6 +13,7 @@
     - [循环与函数](A-tour-of-Go/Exercise-loops-and-Functions.md)
     - [切片](A-tour-of-Go/Exercise-slices.md)
     - [映射](A-tour-of-Go/Exercise-maps.md)
+    - [斐波纳契闭包](A-tour-of-Go/Exercise-fibonaci-closure.md)
     - [练习参考答案](A-tour-of-Go/Exercise-answer.md)
 - Go 细节闲话
   - [Go语言包的基本概念](Go-details/Packages.md)

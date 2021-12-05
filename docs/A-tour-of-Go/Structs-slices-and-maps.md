@@ -556,7 +556,7 @@ func main() {
 （提示：需要使用循环来分配 `[][]uint8` 中的每个 `[]uint8`；请使用 `uint8(intValue)` 在类型之间转换；你可能会用到 `math` 包中的函数。）
 
 
-详细解答：[切片](A-tour-of-Go/Slices.md)
+详细解答：[切片](A-tour-of-Go/Exercise-slices.md)
 
 ## 5 映射
 
@@ -706,10 +706,109 @@ func main() {
 
 你会发现 [strings.Fields](https://go-zh.org/pkg/strings/#Fields) 很有帮助。
 
-详细解答：[映射](A-tour-of-Go/Maps.md)
+详细解答：[映射](A-tour-of-Go/Exercise-maps.md)
 
 ## 6 函数值
 
+**函数也是值。**它们可以像其它值一样传递。
+
+函数值可以用作函数的参数或返回值。
+
+```go
+package main
+
+import (
+	"fmt"
+	"math"
+)
+
+func compute(fn func(float64, float64) float64) float64 {
+	return fn(3, 4)
+}
+
+func main() {
+	hypot := func(x, y float64) float64 {
+		return math.Sqrt(x*x + y*y)
+	}
+	fmt.Println(hypot(5, 12))
+
+	fmt.Println(compute(hypot))
+	fmt.Println(compute(math.Pow))
+}
+```
+
+输出结果：
+
+```shell
+13
+5
+81
+```
+
+解释一下这个程序：
+
+1. 在 `main` 中定义了函数 `hypot`：
+
+$$
+hypot(x,y) = \sqrt{x^2 + y^2}
+$$
+
+2. 函数 `compute` 的返回值类型是 `float64`，参数是一个函数，记为 `fn`；
+
+   函数 `fn` 的返回值类型为 `float64`，参数为两个 `float64` 变量；
+
+   函数 `compute` 返回值为 `fn(3,4)`。
+
+3. ```go
+   fmt.Println(compute(hypot))
+   ```
+
+   `compute` 将 `hypot` 作为参数，打印其返回值；
+
+   所以实际上输出的是 `hypot(3,4)`，结果是 5。
+
+4. ```go
+   fmt.Println(compute(math.Pow))
+   ```
+
+   `compute` 将 `math.Pow` 作为参数，打印其返回值；
+
+   所以实际上输出的是 `math.Pow(3,4)`，结果是 81。
+
 ### 6.1 函数的闭包
 
+Go 函数可以是一个闭包。闭包是一个函数值，它引用了其函数体之外的变量。该函数可以访问并赋予其引用的变量的值，换句话说，该函数被这些变量“绑定”在一起。
+
+例如，函数 `adder` 返回一个闭包。每个闭包都被绑定在其各自的 `sum` 变量上。
+
+```go
+package main
+
+import "fmt"
+
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+
+func main() {
+	pos, neg := adder(), adder()
+	for i := 0; i < 10; i++ {
+		fmt.Println(
+			pos(i),
+			neg(-2*i),
+		)
+	}
+}
+```
+
 ## 练习：斐波纳契闭包
+
+让我们用函数做些好玩的事情。
+
+实现一个 `fibonacci` 函数，它返回一个函数（闭包），该闭包返回一个[斐波纳契数列](https://zh.wikipedia.org/wiki/斐波那契数列) `(0, 1, 1, 2, 3, 5, ...)`。
+
+详细解答：[斐波纳契闭包](A-tour-of-Go/Exercise-fibonaci-closure.md)
