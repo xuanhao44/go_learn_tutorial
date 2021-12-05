@@ -107,19 +107,11 @@
           tabComments: true, // default
           tabHeadings: true, // default
         },
-        markdown: {
-          renderer: {
-            code: function (code, lang) {
-              if (lang === "mermaid") {
-                return (
-                  '<div class="mermaid">' +
-                  mermaid.render("mermaid-svg-" + num++, code) +
-                  "</div>"
-                );
-              }
-              return this.origin.code.apply(this, arguments);
-            },
-          },
+        pagination: {
+          previousText: "上一章节",
+          nextText: "下一章节",
+          crossChapter: true,
+          crossChapterText: true,
         },
       };
     </script>
@@ -134,6 +126,8 @@
     <!-- 代码高亮 -->
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-go.js"></script>
     <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-shell-session.js"></script>
+    <!--分页导航 -->
+    <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
     <!-- 注册 serviceWorker sw.js-->
     <script>
       if (typeof navigator.serviceWorker !== "undefined") {
