@@ -797,13 +797,43 @@ func adder() func(int) int {
 func main() {
 	pos, neg := adder(), adder()
 	for i := 0; i < 10; i++ {
-		fmt.Println(
-			pos(i),
-			neg(-2*i),
-		)
+		fmt.Println(pos(i),neg(-2*i))
 	}
 }
 ```
+
+输出结果：
+
+```shell
+0 0
+1 -2
+3 -6
+6 -12
+10 -20
+15 -30
+21 -42
+28 -56
+36 -72
+45 -90
+```
+
+我们创建了函数 `adder()`，返回另外一个函数，注意写法：
+
+```go
+func adder() func(int) int
+```
+
+该函数的目的是在闭包中累加 `sum` 变量。
+
+`pos`，`neg` 都是函数：
+
+```go
+pos, neg := adder(), adder
+```
+
+*这里闭包的介绍十分简略，以至于我必须再度声明：必须看更多的文档学习。*
+
+*不过此时应该先熟悉用法(形式和原理都不能落下)。*
 
 ## 练习：斐波纳契闭包
 

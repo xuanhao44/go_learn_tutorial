@@ -8,7 +8,15 @@
 
 ## 解答
 
-未完成
+### 斐波那契数定义
+
+$$
+F_{0}=0 \\
+F_{1}=1 \\
+F_{n}=F_{{n-1}}+F_{{n-2}} (n≧2)
+$$
+
+### 代码
 
 ```go
 package main
@@ -17,6 +25,12 @@ import "fmt"
 
 // 返回一个“返回int的函数”
 func fibonacci() func() int {
+	x := 0
+	y := 1
+	return func() int {
+		x, y = y, x+y
+		return x
+	}
 }
 
 func main() {
