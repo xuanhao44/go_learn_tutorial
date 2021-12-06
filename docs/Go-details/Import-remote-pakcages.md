@@ -63,6 +63,8 @@ go get golang.org/x/tour/pic
 
 ### 3.3 代理
 
+#### 3.3.1 手动代理
+
 实话说这个不应该算导入包的步骤之一，但是我们有着特殊的原因。上面的两个步骤基本上都是需要代理的。
 
 比如，如果不开启代理则无法使用 `go get` 安装包。
@@ -72,6 +74,28 @@ go get golang.org/x/tour/pic
 比如，想要手动下载源码压缩包至少要能访问第三方类包所在的网址。
 
 ![pic包网址][pic包网址]
+
+#### 3.3.2 设置 Go 模块代理
+
+当然不开启自己代理也是可以的，**设置 Go 模块代理（Go module proxy）**。
+
+```
+go env -w GOPROXY=https://goproxy.cn,direct
+```
+
+这个环境变量主要是用于设置 Go 模块代理（Go module proxy），其作用是用于使 Go 在后续拉取模块版本时能够脱离传统的 VCS 方式，直接通过镜像站点来快速拉取。
+
+`GOPROXY` 的默认值是：`https://proxy.golang.org,direct`，这有一个很严重的问题，就是 `proxy.golang.org` 在国内是无法访问的，所以执行如下命令：
+
+```go
+$ go env -w GOPROXY=https://goproxy.cn,direct
+```
+
+`GOPROXY` 的值是一个以英文逗号 “,” 分割的 Go 模块代理列表，允许设置多个模块代理，假设你不想使用，也可以将其设置为 “off” ，这将会禁止 Go 在后续操作中使用任何 Go 模块代理。
+
+**direct是什么**：而在刚刚设置的值中，我们可以发现值列表中有 “direct” 标识，它又有什么作用呢？
+
+实际上 “direct” 是一个特殊指示符，用于指示 Go 回源到模块版本的源地址去抓取（比如 GitHub 等），场景如下：当值列表中上一个 Go 模块代理返回 404 或 410 错误时，Go 自动尝试列表中的下一个，遇见 “direct” 时回源，也就是回到源地址去抓取，而遇见 EOF 时终止并抛出类似 “invalid version: unknown revision...” 的错误。
 
 <!-- 图片 -->
 

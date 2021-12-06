@@ -21,3 +21,4 @@
   - [练习：Go语言自定义包_GOPATH](Go-details/Define-import-packages-byGOPATH.md)
   - [Go源码编译过程](Go-details/Go-compile.md)
   - [练习：导入Go语言远程包](Go-details/Import-remote-pakcages.md)
+  - [Go Modules](Go-details/Go-Modules.md)

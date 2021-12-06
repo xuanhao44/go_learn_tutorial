@@ -111,6 +111,10 @@ See also: go build.
 
 *好吧，我承认这个看起来还是比较困难的。知道就行了。*
 
+## 2 `go env`
+
+命令 `go env` 用于打印Go语言的环境信息。比较好理解的是 `GOROOT`，`GOPATH`，`GO111MODULE`，`GOPROXY` 等。在不清楚某项环境变量是如何设置之前可以使用该命令来查看。
+
 <!-- 图片 -->
 
 [help命令]:../_images/help命令.png
