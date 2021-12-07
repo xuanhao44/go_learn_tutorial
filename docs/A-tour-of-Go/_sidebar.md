@@ -18,4 +18,6 @@
       - [Reader](A-tour-of-Go/Exercise-Reader.md)
       - [rot13Reader](A-tour-of-Go/Exercise-rot13Reader.md)
       - [图像](A-tour-of-Go/Exercise-images.md)
+    - [等价二叉查找树](A-tour-of-Go/Exercise-equivalent-binary-trees.md)
+    - [Web 爬虫](A-tour-of-Go/Exercise-web-crawler.md)
     - [练习参考答案](A-tour-of-Go/Exercise-answer.md)
