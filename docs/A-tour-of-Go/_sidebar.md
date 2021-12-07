@@ -12,4 +12,10 @@
     - [切片](A-tour-of-Go/Exercise-slices.md)
     - [映射](A-tour-of-Go/Exercise-maps.md)
     - [斐波纳契闭包](A-tour-of-Go/Exercise-fibonaci-closure.md)
+    - 接口
+      - [Stringer](A-tour-of-Go/Exercise-Stringer.md)
+      - [错误](A-tour-of-Go/Exercise-errors.md)
+      - [Reader](A-tour-of-Go/Exercise-Reader.md)
+      - [rot13Reader](A-tour-of-Go/Exercise-rot13Reader.md)
+      - [图像](A-tour-of-Go/Exercise-images.md)
     - [练习参考答案](A-tour-of-Go/Exercise-answer.md)
