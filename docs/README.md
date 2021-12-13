@@ -13,25 +13,41 @@
 5. [《Go Web 编程》 (github.com)](https://github.com/astaxie/build-web-application-with-golang)
 6. ...
 
-## 文档组织
+## 学习顺序
 
-仓库文件的组织也是一个新的尝试。用了 [docsify](https://docsify.js.org/#/zh-cn/) 组织文档，比较方便。
+### 基础
 
-~~为了避免耦合，每篇文章都会做到尽量独立。~~那是不可能的，不然为啥要用工具来组织。
+1. Go 本地安装和环境配置：[VSCode-Go](Go-local-environment-setting/VSCode-Go.md)
+2. 入门：[Go 语言之旅](A-tour-of-Go/README.md)
+3. 学习的同时可以看 Go 细节闲话的基础部分：
+
+   - [Go语言包的基本概念](Go-details/Packages.md)
+
+   - [GOPATH](Go-details/GOPATH.md)
+
+   - [练习：Go语言自定义包_GOPATH](Go-details/Define-import-packages-byGOPATH.md)
+
+   - [Go源码编译过程](Go-details/Go-compile.md)
+
+   - [练习：导入Go语言远程包](Go-details/Import-remote-pakcages.md)
+
+   - [Go Modules](Go-details/Go-Modules.md)
+4. 还有一些其他的基础知识：
+   - [OS 基础](other/OS.md)
+
+### 网络编程
+
+由于要学网络相关，故学[《Go Web 编程》](https://github.com/astaxie/build-web-application-with-golang)，此书安装 Go 和 Go 基础的部分可以拿来复习和查缺补漏，有了前面的基础理解的会很快。
 
 ## 流水账心得
 
-按照学习的阶段来写心得吧。
+按照学习的阶段写心得。
 
 ### 0
 
 进度：0
 
-我也许可以选择找一本讲解完整的书籍来学习，但我也想要经历自己一点点收集资料、一点点尝试的过程。尽管我也知道这两者并不矛盾，但在看书的时候却总是让书去代替我思考，也不愿意尝试上面的练习和拓展的部分。可见实践和理论之间还是有一定距离的。
-
-在本地安装完 Go 以及配置好环境后，可以学习 Go 学习之旅以及其他内容。
-
-学完之后可能就会自己创建项目了。
+我也许可以选择找一本讲解完整的书籍来学习，但我也想要经历自己一点点收集资料、一点点尝试的过程。尽管我也知道这两者并不矛盾，但在看书的时候却总是让书去代替我思考，也不愿意尝试上面的练习和拓展的部分。可见实践和理论之间还是有一定距离的。在本地安装完 Go 以及配置好环境后，正在学习 Go 语言之旅以及其他内容。学完之后可能就会自己创建项目了。
 
 ### 1
 
@@ -55,3 +71,9 @@
 2. 尽量自己写，不要 copy 太多别人的
 
 有时候觉得别人的笔记很全，没必要自己写；费劲心思写了看起来很全的笔记，之后却看到了自己的上位替代。但不是自己的终究不是自己的，自己构建笔记的过程本身就蕴含着自己的思考。所以构建笔记这件事还是不能停。
+
+## 文档组织
+
+仓库文件的组织也是一个新的尝试。用了 [docsify](https://docsify.js.org/#/zh-cn/) 组织文档，比较方便。
+
+~~为了避免耦合，每篇文章都会做到尽量独立。~~那是不可能的，不然为啥要用工具来组织。

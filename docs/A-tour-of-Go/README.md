@@ -2,7 +2,7 @@
 
 ## 简介
 
-Go 语言中文教程：[Go 语言之旅 (go-zh.org)](https://tour.go-zh.org/list)，可以在线学。本文基本把教程全文搬运过来了，所以会比较长。但是细节上略有不同，添加了自己的一些笔记，增添了目录结构，以供自己查阅。
+Go 语言中文教程：[Go 语言之旅 (go-zh.org)](https://tour.go-zh.org/list)，可以在线学。基本把教程全文搬运过来了，但是细节上略有不同，添加了自己的一些笔记，增添了目录结构，以供自己查阅。
 
 - [包、变量和函数](A-tour-of-Go/Packages-variables-and-functions.md)：学习 Go 程序的基本结构。
 
@@ -15,20 +15,6 @@ Go 语言中文教程：[Go 语言之旅 (go-zh.org)](https://tour.go-zh.org/lis
 - [并发](A-tour-of-Go/Concurrency.md)：作为语言的核心部分，Go 提供了并发的特性。这一部分概览了 goroutine 和 channel，以及如何使用它们来实现不同的并发模式。Go 将并发结构作为核心语言的一部分提供。本节课程通过一些示例介绍并展示了它们的用法。
 
 Go 学习之旅中穿插着练习，将其抽出单独处理。
-
-- [循环与函数](A-tour-of-Go/Exercise-loops-and-Functions.md)
-- [切片](A-tour-of-Go/Exercise-slices.md)
-- [映射](A-tour-of-Go/Exercise-maps.md)
-- [斐波纳契闭包](A-tour-of-Go/Exercise-fibonaci-closure.md)
-- 接口
-  - [Stringer](A-tour-of-Go/Exercise-Stringer.md)
-  - [错误](A-tour-of-Go/Exercise-errors.md)
-  - [Reader](A-tour-of-Go/Exercise-Reader.md)
-  - [rot13Reader](A-tour-of-Go/Exercise-rot13Reader.md)
-  - [图像](A-tour-of-Go/Exercise-images.md)
-- [等价二叉查找树](A-tour-of-Go/Exercise-equivalent-binary-trees.md)
-- [Web 爬虫](A-tour-of-Go/Exercise-web-crawler.md)
-- [练习参考答案](A-tour-of-Go/Exercise-answer.md)
 
 ## 评价
 

@@ -111,9 +111,9 @@
    golang.org/x/tour v0.1.0/go.mod h1:DUZC6G8mR1AXgXy73r8qt/G5RsefKIlSj6jBMc8b9Wc=
    ```
 
-## 4 最后
+## 4 使用 Go Modules 的好处
 
-原理不敢在这里讲啊。建议还是看参考的好。以后接着更新。
+源码不必放在 `GOPATH` 中。
 
 <!-- 图片 -->
 

@@ -1,32 +1,16 @@
 <!-- _sidebar.md -->
 
 - Go 本地安装和环境配置
-  - [Go本地安装和环境配置](Go-local-environment-setting/Go-local-environment-setting.md)
+  - [VSCode-Go](Go-local-environment-setting/VSCode-Go.md)
+  - [Goland-Go](Go-local-environment-setting/Goland-Go.md)
 - [Go 学习之旅](A-tour-of-Go/README.md)
-  - 正文
-    - [包、变量和函数](A-tour-of-Go/Packages-variables-and-functions.md)
-    - [流程控制语句：for、if、else、switch 和 defer](A-tour-of-Go/Flow-control-statements.md)
-    - [更多类型：struct、slice 和映射](A-tour-of-Go/Structs-slices-and-maps.md)
-    - [方法和接口](A-tour-of-Go/Methods-and-interfaces.md)
-    - [并发](A-tour-of-Go/Concurrency.md)
-  - 练习
-    - [循环与函数](A-tour-of-Go/Exercise-loops-and-Functions.md)
-    - [切片](A-tour-of-Go/Exercise-slices.md)
-    - [映射](A-tour-of-Go/Exercise-maps.md)
-    - [斐波纳契闭包](A-tour-of-Go/Exercise-fibonaci-closure.md)
-    - 接口
-      - [Stringer](A-tour-of-Go/Exercise-Stringer.md)
-      - [错误](A-tour-of-Go/Exercise-errors.md)
-      - [Reader](A-tour-of-Go/Exercise-Reader.md)
-      - [rot13Reader](A-tour-of-Go/Exercise-rot13Reader.md)
-      - [图像](A-tour-of-Go/Exercise-images.md)
-    - [等价二叉查找树](A-tour-of-Go/Exercise-equivalent-binary-trees.md)
-    - [Web 爬虫](A-tour-of-Go/Exercise-web-crawler.md)
-    - [练习参考答案](A-tour-of-Go/Exercise-answer.md)
 - Go 细节闲话
-  - [Go语言包的基本概念](Go-details/Packages.md)
-  - [GOPATH](Go-details/GOPATH.md)
-  - [练习：Go语言自定义包_GOPATH](Go-details/Define-import-packages-byGOPATH.md)
-  - [Go源码编译过程](Go-details/Go-compile.md)
-  - [练习：导入Go语言远程包](Go-details/Import-remote-pakcages.md)
-  - [Go Modules](Go-details/Go-Modules.md)
+   - [Go语言包的基本概念](Go-details/Packages.md)
+   - [GOPATH](Go-details/GOPATH.md)
+   - [练习：Go语言自定义包_GOPATH](Go-details/Define-import-packages-byGOPATH.md)
+   - [Go源码编译过程](Go-details/Go-compile.md)
+   - [练习：导入Go语言远程包](Go-details/Import-remote-pakcages.md)
+   - [Go Modules](Go-details/Go-Modules.md)
+- Go 网络编程
+- 其他知识
+   - [OS 基础](other/OS.md)
