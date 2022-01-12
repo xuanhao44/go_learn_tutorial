@@ -1,5 +1,7 @@
 # day1 - gorm 增删改查
 
+day1 是 gorm 入门中的入门捏！我还没有学过数据库，Mysql，gorm 都要学，这样才称得上健全（雾）。
+
 ## 0 参考
 
 - [Go组件学习——gorm四步带你搞定DB增删改查 - 简书 (jianshu.com)](https://www.jianshu.com/p/1513f55f8192)
@@ -11,7 +13,7 @@
 
 Mysql 是一种数据库；
 
-gorm 是 go 操作数据库的一种框架，Mysql 是其所能操纵的数据库中的一种。
+gorm 是 Go 操作数据库的一种框架，Mysql 是其所能操纵的数据库中的一种。
 
 ## 2 Mysql 安装和初步设置
 
@@ -51,7 +53,7 @@ mysql> CREATE DATABASE hitszedu;
 
 例：
 
-```mysql
+```sql
 CREATE TABLE `need` (
   `need_id` varchar(128) NOT NULL COMMENT '需求号',
   `need_type` varchar(64) NOT NULL COMMENT '类型:勤工俭学(workStudy)、公益活动(publicBenefit)、特色课程(course)',
@@ -59,20 +61,19 @@ CREATE TABLE `need` (
   `title` varchar(128) NOT NULL COMMENT '需求标题',
   `description` varchar(1024) NOT NULL COMMENT '需求描述',
   `address_name` varchar(1024) NOT NULL COMMENT '地点名（API获取) ',
-  `longitude` varchar(128) NOT NULL COMMENT '经度',
-  `latitude` varchar(128) NOT NULL COMMENT '纬度',
+  `longitude` BIGINT(6) NOT NULL COMMENT '经度',
+  `latitude` BIGINT(6) NOT NULL COMMENT '纬度',
   `address_description` varchar(1024) NOT NULL COMMENT '地点描述',
   `reward` varchar(128) NOT NULL COMMENT '报酬',
-  `number_of_sign_up` varchar(128) NOT NULL COMMENT '可报名人数',
+  `number_of_sign_up` BIGINT(6) NOT NULL COMMENT '可报名人数',
   `publish_time` BIGINT(6) NOT NULL COMMENT '发布时间（时间戳）',
   `publisher_name` varchar(64) NOT NULL COMMENT '发布者名字（如：食堂，学校，xx社团）',
-  `publisher_id` varchar(128) NOT NULL COMMENT '发布人（类型为userID，因为需要根据权限进行判断）',
-  `reviewer_id` varchar(128) NOT NULL COMMENT '审核人（类型为adminID，因为需要权限固定，由后端填写）',
-  `state` varchar(64) NOT NULL COMMENT '状态：报名（signUp)(默认)、终止(stop)、待审核（wait)(之后的需求，现在用不上）',
-  `signed_up` varchar(64) NOT NULL COMMENT '已报名人数，便于报名逻辑处理',
-  PRIMARY KEY (`need_id`) -- 设置主键
+  `publisher_id` varchar(128) NOT NULL COMMENT '发布人（类型为userID）',
+  `reviewer_id` varchar(128) NOT NULL COMMENT '审核人（类型为adminID）',
+  `state` varchar(64) NOT NULL COMMENT '状态：报名（signUp)(默认)、终止(stop)、待审核（wait)',
+  `signed_up` BIGINT(6) NOT NULL COMMENT '已报名人数，便于报名逻辑处理',
+  PRIMARY KEY (`need_id`)
 ) ENGINE = InnoDB DEFAULT CHARSET = utf8mb4 COMMENT = '需求';
--- 设置innoDB引擎，设置默认UTF8编码
 ```
 
 3. 鼠标左键选中，点击闪电符号运行
@@ -87,10 +88,10 @@ CREATE TABLE `need` (
 
 先尝试添加一组数据，同样是用 SQL 脚本：
 
-```mysql
-INSERT INTO `hitszedu`.`need` 
+```sql
+INSERT INTO `hitszedu`.`need`
 (`need_id`, `need_type`, `time`, `title`, `description`, `address_name`, `longitude`, `latitude`, `address_description`, `reward`, `number_of_sign_up`, `publish_time`, `publisher_name`, `publisher_id`, `reviewer_id`, `state`, `signed_up`)
-VALUES ('123', '123', '333', '333', '3333', '3333', '3333', '3333', '333333', '3333', '3333', '3333', '3333', '3333', '3333', '3333', '3333');
+VALUES ('123', '123', '333', '333', '3333', '3333', 3333, 3333, '333333', '3333', '3333', 3333, '3333', '3333', '3333', '3333', 3333);
 ```
 
 可以通过右键 need 表选择 Select Rows - Limit 1000：
@@ -120,22 +121,22 @@ type Need struct {
 	Title              string `gorm:"type:varchar(128);column:title"`
 	Description        string `gorm:"type:varchar(1024);column:description"`
 	AddressName        string `gorm:"type:varchar(1024);column:address_name"`
-	Longitude          string `gorm:"type:varchar(128);column:longitude"`
-	Latitude           string `gorm:"type:varchar(128);column:latitude"`
+	Longitude          int    `gorm:"type:BIGINT(6);column:longitude"`
+	Latitude           int    `gorm:"type:BIGINT(6);column:latitude"`
 	AddressDescription string `gorm:"type:varchar(1024);column:address_description"`
 	Reward             string `gorm:"type:varchar(128);column:reward"`
-	NumberOfSignUp     string `gorm:"type:varchar(128);column:number_of_sign_up"`
-	PublishTime        int64  `gorm:"type:BIGINT(6);column:publish_time"`
+	NumberOfSignUp     int    `gorm:"type:BIGINT(6);column:number_of_sign_up"`
+	PublishTime        int    `gorm:"type:BIGINT(6);column:publish_time"`
 	PublisherName      string `gorm:"type:varchar(64);column:publisher_name"`
 	PublisherID        string `gorm:"type:varchar(128);column:publisher_id"`
 	ReviewerID         string `gorm:"type:varchar(128);column:reviewer_id"`
 	State              string `gorm:"type:varchar(64);column:state"`
-	SignedUp           string `gorm:"type:varchar(64);column:signed_up"`
+	SignedUp           int    `gorm:"type:BIGINT(6);column:signed_up"`
 }
 
 func main() {
 
-	db, err := gorm.Open("mysql", "root:xxxxxxxxx@tcp(127.0.0.1:3306)/hitszedu?charset=utf8&parseTime=True&loc=Local")
+	db, err := gorm.Open("mysql", "root:xxxxxxxx@tcp(127.0.0.1:3306)/hitszedu?charset=utf8&parseTime=True&loc=Local")
 	if err != nil {
 		panic("连接数据库失败")
 	}
@@ -149,16 +150,17 @@ func main() {
 		Title:              "我需要重新集结我的部队",
 		Description:        "我的圣堂武士损失惨重",
 		AddressName:        "湖北宜昌",
-		Longitude:          "llllll",
-		Latitude:           "aaaaaa",
+		Longitude:          111111,
+		Latitude:           222222,
 		AddressDescription: "水电之都",
 		Reward:             "100元",
-		NumberOfSignUp:     "20",
+		NumberOfSignUp:     20,
 		PublishTime:        1,
 		PublisherName:      "lxh",
 		PublisherID:        "shirou",
 		ReviewerID:         "323232",
 		State:              "signUp",
+		SignedUp:           6,
 	}
 	err0 := db.Create(&need).Error
 	if err0 != nil {
@@ -188,15 +190,15 @@ go mod 肯定要用；然后命令行执行 go build 以及运行，或者 VS Co
 
 ## 4 增删改查
 
-增已经有了，就来测试一下其他的吧！
+增已经有了，就来测试一下其他的吧！(下面的代码并不完整)
 
-删：
+### 删
 
 ```go
 err0 := db.Delete(&need).Error
 ```
 
-改：
+### 改
 
 ```go
 err0 := db.Model(&need).Update("title", "战局对我们的战士太不利了").Error
@@ -204,7 +206,7 @@ err0 := db.Model(&need).Update("title", "战局对我们的战士太不利了").
 
 删除和修改的效果的查看方法和增加是一样的。
 
-查：
+### 查(First)
 
 ```go
 var needResult Need
@@ -215,6 +217,50 @@ fmt.Println("result: ", needResult)
 查询结果：
 
 ![gorm查询输出][gorm查询输出]
+
+### 查(Find)
+
+Find 和 First 不同，会查找符合条件的所有数据，所以需要创建一个切片来存储查询的结果。
+
+```go
+needResults := make([]Need, 5)
+```
+
+ eg1：查找 need_type = workStudy 的数据
+
+```go
+needResults := make([]Need, 5)
+err0 := db.Where("need_type = ?", "workStudy").Find(&needResults).Error
+fmt.Println("result: ", needResults)
+if err0 != nil {
+	panic(err0)
+}
+```
+
+查询结果：
+
+```shell
+连接成功
+result:  [{10086 workStudy 1月2日 我需要重新集结我的部队 我的圣堂武士损失惨重 湖北宜昌 111111 222222 水电之都 100元 20 1 lxh shirou 323232 signUp 6}]
+```
+
+eg2：查找所有数据
+
+```go
+needResults := make([]Need, 5)
+err0 := db.Find(&needResults).Error
+fmt.Println("result: ", needResults)
+if err0 != nil {
+	panic(err0)
+}
+```
+
+查询结果：
+
+```shell
+连接成功
+result:  [{10086 workStudy 1月2日 我需要重新集结我的部队 我的圣堂武士损失惨重 湖北宜昌 111111 222222 水电之都 100元 20 1 lxh shirou 323232 signUp 6} {123 123 333 333 3333 3333 3333 3333 333333 3333 3333 3333 3333 3333 3333 3333 3333}]
+```
 
 ## 5 注意事项
 
@@ -230,7 +276,7 @@ NeedType           string `gorm:"type:varchar(64);column:need_type"`
 
 SQL：
 
-```mysql
+```sql
 `need_type` varchar(64) NOT NULL COMMENT '类型:勤工俭学(workStudy)、公益活动(publicBenefit)、特色课程(course)',
 ```
 
@@ -253,6 +299,7 @@ err0 := db.Create(&need).Error
 
 <!-- 图片 -->
 
+[Set_as_default_schema]:../_images/Set_as_default_schema.png
 [sql脚本建表]:../_images/sql脚本建表.png
 
 [闪电符号]:../_images/闪电符号.png
@@ -271,5 +318,3 @@ err0 := db.Create(&need).Error
 
 [gorm查询输出]:../_images/gorm查询输出.png
 [主键重复panic]:../_images/主键重复panic.png
-
-[Set_as_default_schema]:../_images/Set_as_default_schema.png

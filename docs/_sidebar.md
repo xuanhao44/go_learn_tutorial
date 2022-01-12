@@ -13,6 +13,6 @@
    - [Go Modules](Go-details/Go-Modules.md)
 - Go 网络编程
 - Mysql 和 gorm
-   - [day1](Mysql&gorm/day1.md)
+   - [day1 - gorm 增删查改](Mysql&gorm/day1.md)
 - 其他知识
    - [OS 基础](other/OS.md)
